@@ -143,8 +143,8 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
-  padding: 0 40px;
+  min-height: calc(100vh - 70px);
+  padding: 40px 40px 80px;
   display: flex;
   align-items: center;
   justify-content: center;
