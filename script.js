@@ -6,7 +6,37 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollSpy();
   initAnimations();
+  updateExperienceYears();
 });
+
+// ========================================
+// Experience Years Calculator
+// ========================================
+
+function updateExperienceYears() {
+  const now = new Date();
+
+  // 경력 기간들 (시작일, 종료일)
+  const careers = [
+    { start: new Date(2020, 6, 1), end: new Date(2022, 11, 31) }, // 두잇시스템: 2020.07 ~ 2022.12
+    { start: new Date(2023, 10, 1), end: now }                     // 아정네트웍스: 2023.11 ~ 현재
+  ];
+
+  // 총 개월수 계산
+  let totalMonths = 0;
+  careers.forEach(({ start, end }) => {
+    const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+    totalMonths += months;
+  });
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  const el = document.getElementById('experience-years');
+  if (el) {
+    el.textContent = `${years}년 ${months}개월`;
+  }
+}
 
 // ========================================
 // Navigation
