@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinseong | Backend Engineer</title>
+  <meta name="description" content="Backend Engineer 정진성 이력서. Java, Kotlin, Spring Boot 전문.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-logo">Jinseong</div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      PDF
+    </button>
+  </nav>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="section hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Backend Engineer</div>
+        <h1 class="hero-title">
+          <span class="hero-greeting">안녕하세요</span>
+          <span class="hero-name">정진성</span>
+          <span class="hero-role">입니다</span>
+        </h1>
+        <p class="hero-desc">
+          월 <strong>60만+</strong> 검색 유입 트래픽의 사용자-facing 서비스와<br>
+          수백 명의 운영 인력이 사용하는 업무 시스템을 대상으로<br>
+          <strong>운영 안정성과 정합성을 중심으로 실서비스를 책임져 온 백엔드 개발자</strong>입니다.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">4년 9개월</span>
+            <span class="stat-label">경력</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Java/Kotlin</span>
+            <span class="stat-label">주력 언어</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Spring Boot</span>
+            <span class="stat-label">프레임워크</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary">경력 보기</a>
+          <a href="#contact" class="btn btn-secondary">연락하기</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="section-content">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h4>Language</h4>
+            <p>Kotlin, Java</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🍃</div>
+            <h4>Framework</h4>
+            <p>Spring Boot, Spring Data JPA</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h4>Database</h4>
+            <p>MySQL, Oracle</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <h4>Infra / Others</h4>
+            <p>Redis, Batch Processing, External API Integration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+      <div class="section-content">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+
+        <!-- 아정네트웍스 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-company">
+              <h3>아정네트웍스</h3>
+              <span class="exp-role">Backend Engineer</span>
+            </div>
+            <span class="exp-period">2023.11 ~ 현재</span>
+          </div>
+
+          <!-- 플랫폼 챕터 -->
+          <div class="exp-chapter">
+            <div class="chapter-header">
+              <h4>플랫폼 챕터</h4>
+              <span class="chapter-period">2025.04 ~ Present</span>
+            </div>
+            <p class="chapter-desc">
+              월 60만+ 검색 유입 트래픽을 처리하는 사용자-facing 서비스에서
+              외부 연동·정산·배치·운영 리스크를 통제하는 플랫폼 백엔드 담당
+            </p>
+
+            <div class="project-item">
+              <h5>쇼핑적립 서비스 <a href="https://www.ajd.co.kr/via-shopping" target="_blank">↗</a></h5>
+              <ul>
+                <li>링크프라이스, NBT 등 외부 쇼핑몰 API 연동 및 운영</li>
+                <li>포인트 원장 기반 적립·차감 로직 운영 (부분 적립/취소/지연 적립 고려)</li>
+                <li><strong>대규모 적립·취소 배치 성능 개선</strong>: IN 쿼리 배치 조회 + Map 캐싱, 청크 로딩</li>
+                <li>기프티쇼 발행: Redisson 분산 락(TTL 30s)으로 동시 요청 중복 방지</li>
+                <li>Cold Start 이슈 진단 → 애플리케이션 레벨 DB Ready Check 추가 <a href="https://hammaveros.tistory.com/3" target="_blank" class="blog-link">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h5>플랫폼 코어 <a href="https://www.ajd.co.kr/" target="_blank">↗</a></h5>
+              <ul>
+                <li>RestClient 분리로 장애 전파 차단 (커넥션 풀·타임아웃 개별 설정) <a href="https://hammaveros.tistory.com/6" target="_blank" class="blog-link">Blog</a></li>
+                <li>CRM 장애/부하가 플랫폼으로 전파되지 않도록 트래픽 격리 구조 설계</li>
+                <li>Low Code MVP → Python(Django) / MongoDB 환경 이식</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h5>노써치 / 견적비교 서비스 <a href="https://bidding.nosearch.com/" target="_blank">↗</a></h5>
+              <ul>
+                <li>대리점(셀러) 도메인 및 운영 정보 관리 시스템 개발</li>
+                <li>FCM 푸시, 알림톡 연동 / 베스트 상품·리뷰 기능</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CRM 챕터 -->
+          <div class="exp-chapter">
+            <div class="chapter-header">
+              <h4>CRM 챕터</h4>
+              <span class="chapter-period">2023.11 ~ 2025.04</span>
+            </div>
+            <p class="chapter-desc">
+              수백 명의 상담원/운영 인력이 사용하는 계약·신청·지급·정산·환수 CRM 핵심 시스템 개발·운영
+            </p>
+            <ul class="exp-list">
+              <li>인터넷/가전 렌탈/휴대폰 등 <strong>상품 계약 단위</strong> CRM 핵심 도메인 개발</li>
+              <li>계약별 실마진 집계 최적화 → 데이터 마트 분리로 조회 성능 안정화</li>
+              <li><strong>사은품 지급·환수 배치 성능 개선</strong>: information_schema 락 분석, N+1 제거, 비동기 처리 <span class="highlight">(10분 → 1분)</span></li>
+              <li>Redis 캐시 경량화로 트래픽 대응 및 메모리 안정성 확보</li>
+              <li>Hibernate Query Plan Cache 이슈 분석 및 개선 <a href="https://hammaveros.tistory.com/5" target="_blank" class="blog-link">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 두잇시스템 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-company">
+              <h3>두잇시스템</h3>
+              <span class="exp-role">Developer</span>
+            </div>
+            <span class="exp-period">2020.07 ~ 2022.12</span>
+          </div>
+          <ul class="exp-list">
+            <li>LG 베스트샵 백오피스 개발 (Java, Oracle)
+              <ul>
+                <li>방문 예약 송신 시스템 고도화 및 캘린더 개발</li>
+                <li>제품 연동 사은품 / 배송 정보 연동</li>
+                <li>LG전자 멤버십 네이버페이/페이코 연동</li>
+              </ul>
+            </li>
+            <li>RPA 기반 업무 자동화 처리</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="section-content">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2 class="section-title">Side Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image jsspace">
+              <span>🛠️</span>
+            </div>
+            <div class="project-info">
+              <h3>JSSpace</h3>
+              <p>웹 기반 유틸리티 도구 모음 (80+ 도구)</p>
+              <a href="https://jsspace.online" target="_blank" class="project-link-btn">사이트 방문 ↗</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image playground">
+              <span>🎮</span>
+            </div>
+            <div class="project-info">
+              <h3>JS-Playground</h3>
+              <p>브라우저 기반 미니게임 컬렉션 (12종)</p>
+              <a href="https://js-playground.online" target="_blank" class="project-link-btn">사이트 방문 ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">💰</div>
+            <h4>Zero Cost 아키텍처</h4>
+            <p>정적 빌드 기반, 서버 비용 0원 운영</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">👤</div>
+            <h4>1인 개발</h4>
+            <p>100+ 도구, 20+ 게임 기획~배포</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🤖</div>
+            <h4>AI 협업</h4>
+            <p>프롬프트 엔지니어링으로 생산성 극대화</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section-content">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="info-card">
+            <h4>Education</h4>
+            <p class="edu-item">
+              <strong>안양대학교</strong><br>
+              정보통신공학과 졸업 (2013.03 ~ 2020.02)
+            </p>
+          </div>
+          <div class="info-card">
+            <h4>Certifications</h4>
+            <p class="cert-item">정보처리기사 (2019.08)</p>
+            <p class="cert-item">중소기업 융합학회 장려상 (2018.10)</p>
+          </div>
+        </div>
+
+        <div class="contact-main">
+          <h3>연락하기</h3>
+          <p>문의사항이 있으시면 편하게 연락주세요!</p>
+          <div class="contact-links">
+            <a href="tel:010-3589-0199" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              010-3589-0199
+            </a>
+            <a href="mailto:jinseong205@gmail.com" class="contact-btn primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              jinseong205@gmail.com
+            </a>
+            <a href="https://hammaveros.tistory.com" target="_blank" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              </svg>
+              Blog
+            </a>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2025 Jinseong. All rights reserved.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
