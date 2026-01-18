@@ -485,16 +485,36 @@ body {
   font-weight: 600;
 }
 
-.project-item li ul {
+.project-item li ul,
+.exp-list li ul {
   margin-top: 8px;
   margin-left: 10px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.project-item li ul li,
+.exp-list li ul li {
+  padding-left: 0;
 }
 
 .project-item li ul li::before,
 .exp-list li ul li::before {
-  background: var(--text-muted);
-  width: 4px;
-  height: 4px;
+  display: none;
+}
+
+.edu-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.subsection-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-primary);
 }
 
 .blog-link {
