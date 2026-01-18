@@ -144,10 +144,15 @@ body {
 .hero {
   position: relative;
   padding: 120px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -206,6 +211,7 @@ body {
 
 .hero-stats {
   display: flex;
+  justify-content: center;
   gap: 48px;
   margin-bottom: 40px;
 }
@@ -229,6 +235,7 @@ body {
 
 .hero-cta {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
