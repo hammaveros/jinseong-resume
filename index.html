@@ -41,9 +41,9 @@
           <span class="hero-role">입니다</span>
         </h1>
         <p class="hero-desc">
-          월 <strong>60만+</strong> 검색 유입 트래픽의 사용자-facing 서비스와<br>
-          수백 명의 운영 인력이 사용하는 업무 시스템을 대상으로<br>
-          <strong>운영 안정성과 정합성을 중심으로 실서비스를 책임져 온 백엔드 개발자</strong>입니다.
+          <strong>100만 MAU</strong> 규모 서비스와 수백 명이 사용하는 CRM 핵심 시스템에서<br>
+          외부 연동·정산·배치·운영 안정성을 End-to-End로 설계하고 운영해 온<br>
+          <strong>백엔드 개발자</strong>입니다.
         </p>
         <div class="hero-stats">
           <div class="stat">
@@ -51,7 +51,7 @@
             <span class="stat-label">경력</span>
           </div>
           <div class="stat">
-            <span class="stat-number">Java/Kotlin</span>
+            <span class="stat-number">Kotlin/Java</span>
             <span class="stat-label">주력 언어</span>
           </div>
           <div class="stat">
@@ -61,11 +61,13 @@
         </div>
         <div class="hero-skills">
           <span class="hero-skill-tag">MySQL</span>
-          <span class="hero-skill-tag">Oracle</span>
           <span class="hero-skill-tag">Redis</span>
           <span class="hero-skill-tag">JPA</span>
-          <span class="hero-skill-tag">Batch</span>
-          <span class="hero-skill-tag">External API</span>
+          <span class="hero-skill-tag">QueryDSL</span>
+          <span class="hero-skill-tag">Docker</span>
+          <span class="hero-skill-tag">AWS (EKS)</span>
+          <span class="hero-skill-tag">DataDog</span>
+          <span class="hero-skill-tag">JUnit5</span>
         </div>
         <div class="hero-cta">
           <a href="#experience" class="btn btn-primary">경력 보기</a>
@@ -96,42 +98,63 @@
             <span class="exp-period">2023.11 ~ 현재</span>
           </div>
 
-          <!-- 플랫폼 챕터 -->
+          <!-- 플랫폼 BE 챕터 -->
           <div class="exp-chapter">
             <div class="chapter-header">
-              <h4>플랫폼 챕터</h4>
+              <h4>플랫폼 BE 챕터</h4>
               <span class="chapter-period">2025.04 ~ 현재</span>
             </div>
             <p class="chapter-desc">
-              월 60만+ 검색 유입 트래픽을 처리하는 사용자-facing 서비스에서
-              외부 연동·정산·배치·운영 리스크를 통제하는 플랫폼 백엔드 담당
+              Kotlin, Spring Boot, QueryDSL, Redis, AWS, EKS<br>
+              월 100만 규모 트래픽을 처리하는 사용자 서비스 플랫폼 백엔드
             </p>
 
             <div class="project-item">
-              <h5>쇼핑적립 서비스 <a href="https://www.ajd.co.kr/via-shopping" target="_blank">↗</a></h5>
+              <p style="margin-bottom: 12px; color: var(--text-secondary); font-size: 0.9rem;">
+                아정당 기술 블로그 기고 - Redis Timeout, 문제의 원인은 Redis가 아니었다
+                <a href="https://hammaveros.tistory.com/7" target="_blank" class="blog-link">Blog</a>
+              </p>
               <ul>
-                <li>링크프라이스, NBT 등 외부 쇼핑몰 API 연동 및 운영</li>
-                <li>포인트 원장 기반 적립·차감 로직 운영 (부분 적립/취소/지연 적립 고려)</li>
-                <li><strong>대규모 적립·취소 배치 성능 개선</strong>: IN 쿼리 배치 조회 + Map 캐싱, 청크 로딩</li>
-                <li>기프티쇼 발행: Redisson 분산 락(TTL 30s)으로 동시 요청 중복 방지</li>
-                <li>Cold Start 이슈 진단 → 애플리케이션 레벨 DB Ready Check 추가 <a href="https://hammaveros.tistory.com/3" target="_blank" class="blog-link">Blog</a></li>
+                <li>250RPS 환경에서 CPU 포화 원인 분석 및 Docker + k6 + JFR 재현 테스트 수행</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h5>쇼핑적립 서비스 <a href="https://www.ajd.co.kr/via-shopping" target="_blank">↗</a></h5>
+              <p style="margin-bottom: 12px; color: var(--text-secondary); font-size: 0.9rem;">
+                지원 인력으로 합류하여 리워드 시스템 개발 후, 서비스를 인수받아 메인 개발자 전환.
+                정산 로직 오류 수정 및 대규모 리팩토링으로 안정화 전환 및 신규 기능 확장
+              </p>
+              <ul>
+                <li>링크프라이스, NBT 등 외부 제휴사 API 연동 및 운영</li>
+                <li>제휴사별 상이한 정산 정책 (즉시/부분/선지급, 구매확정/취소확정) 구조 <strong>신규 설계</strong></li>
+                <li>쿠팡 일 50만원 한도 재계산 – <strong>구매금액/리워드 비율 정렬 기반 최적 배분</strong></li>
+                <li>룰렛 기반 리워드 시스템 설계 및 기프티쇼 API 연동 (발행/조회/재발급)</li>
+                <li>Redis 분산 락 기반 <strong>동시성 제어로 중복 발급 0건 유지</strong></li>
+                <li>트래픽 집중 대비, 메인 페이지 및 제휴몰별 조회 Redis 캐싱 적용</li>
+                <li>포인트·캐시 이원화 구조 신규 설계</li>
+                <li>대규모 적립·취소 배치 반복 조회 구조 개선으로 <strong>O(N²) → O(N) 성능 최적화</strong></li>
+                <li>Cold Start 진단 및 Startup Probe 기반 웜업 체계 구축, 배포 직후 초기 장애 방지 <a href="https://hammaveros.tistory.com/3" target="_blank" class="blog-link">Blog</a></li>
+                <li>ISMS 대응을 위한 보안 취약점 점검, 로그 관리 및 접근통제 적용</li>
               </ul>
             </div>
 
             <div class="project-item">
               <h5>플랫폼 코어 <a href="https://www.ajd.co.kr/" target="_blank">↗</a></h5>
               <ul>
-                <li>RestClient 분리로 장애 전파 차단 (커넥션 풀·타임아웃 개별 설정) <a href="https://hammaveros.tistory.com/6" target="_blank" class="blog-link">Blog</a></li>
-                <li>CRM 장애/부하가 플랫폼으로 전파되지 않도록 트래픽 격리 구조 설계</li>
-                <li>Low Code MVP → Python(Django) / MongoDB 환경 이식</li>
+                <li>서비스·트랜잭션 경계를 기준으로 RestClient 분리 <a href="https://hammaveros.tistory.com/6" target="_blank" class="blog-link">Blog</a></li>
+                <li>CRM 장애 및 부하가 플랫폼 서비스로 전파되지 않도록 트래픽 격리 구조 설계</li>
+                <li>도메인 및 DB 의존성 관련 커넥션 정책 분리로 <strong>장애 전파 차단</strong></li>
+                <li>Fallback 처리 불가 환경에서 서킷브레이커 대신 풀 분리로 장애 격리</li>
+                <li>Low Code 기반 MVP 프로젝트를 Python(Django) / MongoDB 환경으로 이식</li>
               </ul>
             </div>
 
             <div class="project-item">
               <h5>노써치 / 견적비교 서비스 <a href="https://bidding.nosearch.com/" target="_blank">↗</a></h5>
               <ul>
-                <li>대리점(셀러) 도메인 및 운영 정보 관리 시스템 개발</li>
-                <li>FCM 푸시, 알림톡 연동 / 베스트 상품·리뷰 기능</li>
+                <li>대리점(셀러) 운영 도메인 관리 시스템 개발</li>
+                <li>FCM기반 앱 푸시·알림톡 사용자 알림 기능 구현</li>
               </ul>
             </div>
           </div>
@@ -143,14 +166,21 @@
               <span class="chapter-period">2023.11 ~ 2025.04</span>
             </div>
             <p class="chapter-desc">
-              수백 명의 상담원/운영 인력이 사용하는 계약·신청·지급·정산·환수 CRM 핵심 시스템 개발·운영
+              Java Spring Boot, MyBatis, QueryDSL, Redis, AWS, EKS<br>
+              수백 명의 상담원이 사용하는 계약·지급·정산·환수 중심 CRM 시스템 개발·운영
             </p>
             <ul class="exp-list">
-              <li>인터넷/가전 렌탈/휴대폰 등 <strong>상품 계약 단위</strong> CRM 핵심 도메인 개발</li>
-              <li>계약별 실마진 집계 최적화 → 데이터 마트 분리로 조회 성능 안정화</li>
-              <li><strong>사은품 지급·환수 배치 성능 개선</strong>: information_schema 락 분석, N+1 제거, 비동기 처리 <span class="highlight">(10분 → 1분)</span></li>
-              <li>Redis 캐시 경량화로 트래픽 대응 및 메모리 안정성 확보</li>
-              <li>Hibernate Query Plan Cache 이슈 분석 및 개선 <a href="https://hammaveros.tistory.com/5" target="_blank" class="blog-link">Blog</a></li>
+              <li>인터넷 / 가전 렌탈 / 휴대폰 등 상품 계약 단위 기반 CRM 도메인 개발·운영</li>
+              <li>계약별 실마진 집계 로직 설계 및 최적화</li>
+              <li>드라이빙 테이블 축소 설계로 정산(사은품/지원금/환수금) 집계 성능 개선</li>
+              <li>이후 DA 협업으로 데이터마트 분리하여 조회 성능 안정화</li>
+              <li>사은품 지급·환수 배치성 처리 로직 성능 및 정합성 개선</li>
+              <li>information_schema 기반 락 대기 분석으로 쓰기 경합 병목 식별</li>
+              <li>N+1 제거, 통계성 데이터 비동기 처리 적용 <strong>마감 지연 해소 <span class="highlight">(10분 → 1분)</span></strong></li>
+              <li>일 수억원 규모 지급 건 <strong>동시성 이슈 식별 및 중복 지급 방지</strong> 처리</li>
+              <li>Redis 캐시 경량화를 통한 트래픽 대응 및 메모리 안정성 확보</li>
+              <li>힙 덤프 기반 Hibernate Query Plan Cache 메모리 점유로 인한 성능 저하를 식별 <a href="https://hammaveros.tistory.com/5" target="_blank" class="blog-link">Blog</a></li>
+              <li>단기 완화 후 쿼리 구조 개선 및 Query Plan Cache 조정으로 재발 방지</li>
             </ul>
           </div>
         </div>
@@ -209,7 +239,7 @@
             </div>
             <div class="project-info">
               <h3>JSSpace</h3>
-              <p>웹 기반 유틸리티 도구 모음 (80+ 도구)</p>
+              <p>온라인 유틸리티 도구 모음 (129+ 도구, KR/EN 이중 언어)</p>
               <a href="https://jsspace.online" target="_blank" class="project-link-btn">사이트 방문 ↗</a>
             </div>
           </div>
@@ -220,7 +250,7 @@
             </div>
             <div class="project-info">
               <h3>JS-Playground</h3>
-              <p>브라우저 기반 미니게임 컬렉션 (12종)</p>
+              <p>브라우저 기반 미니게임 컬렉션 (36+ 게임)</p>
               <a href="https://js-playground.online" target="_blank" class="project-link-btn">사이트 방문 ↗</a>
             </div>
           </div>
@@ -230,17 +260,17 @@
           <div class="highlight-item">
             <div class="highlight-icon">💰</div>
             <h4>Zero Cost 아키텍처</h4>
-            <p>정적 빌드 기반, 서버 비용 0원 운영</p>
+            <p>서버 없이 클라이언트 사이드로만 동작, Cloudflare Pages</p>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">👤</div>
-            <h4>1인 개발</h4>
-            <p>100+ 도구, 20+ 게임 기획~배포</p>
+            <h4>1인 기획·개발·운영</h4>
+            <p>129+ 도구, 36+ 게임, KR/EN 이중 언어</p>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">🤖</div>
-            <h4>AI 협업</h4>
-            <p>프롬프트 엔지니어링으로 생산성 극대화</p>
+            <h4>AI 협업 개발</h4>
+            <p>Claude Code 기반 설계 및 배포, Next.js SSG + SEO 최적화</p>
           </div>
         </div>
       </div>
